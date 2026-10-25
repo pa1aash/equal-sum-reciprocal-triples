@@ -1,0 +1,18 @@
+PASS A(4800) = 506
+     c_iso = 0.10534574;  c_iso * 4800 = 505.66
+     y            A(y)       c_iso*y      (A-c y)/(sqrt(y) log y)
+     1000         105        105.3        -0.0016
+     10000        1053       1053.5       -0.0005
+     100000       10535      10534.6      +0.0001
+     1000000      105332     105345.7     -0.0010
+     10000000     1053444    1053457.4    -0.0003
+     40000000     4213811    4213829.6    -0.0002
+PASS normalised error |A(y) - c_iso y| / (sqrt(y) log y) stays < 1
+     X            L(X)          L/(X log X)   (c_iso = 0.10535)
+     10000        4910          0.05331   (L - c X log X)/X = -0.4793
+     100000       73351         0.06371   (L - c X log X)/X = -0.4793
+     1000000      976001        0.07065   (L - c X log X)/X = -0.4794
+     10000000     12185626      0.07560   (L - c X log X)/X = -0.4794
+     40000000     54583881      0.07796   (L - c X log X)/X = -0.4794
+PASS L(X) - c_iso X log X = O(X) numerically (secondary term bounded)
+ALL ISOSCELES CHECKS PASSED

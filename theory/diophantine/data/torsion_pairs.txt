@@ -1,0 +1,7 @@
+primitive pairs with S <= 600: 1753; dual 423, torsion (outside the base group) 0, other 1330
+primitive pairs with S <= 4800: 46254; dual 7626, torsion (outside the base group) 4, other 38624
+pairs of torsion type (all on curves with torsion Z/12 and r < 0):
+  S = 845: (182, 208, 455) ; (165, 240, 440)  lambda = 169/16, r = -4
+  S = 1183: (231, 336, 616) ; (208, 455, 520)  lambda = 169/16, r = -4
+  S = 2145: (462, 528, 1155) ; (390, 715, 1040)  lambda = 169/16, r = -4
+  S = 3003: (546, 1001, 1456) ; (528, 1155, 1320)  lambda = 169/16, r = -4

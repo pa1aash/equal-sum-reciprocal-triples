@@ -1,0 +1,51 @@
+{
+  "title": "Code and data for: Triples with equal sum and equal reciprocal sum",
+  "upload_type": "software",
+  "description": "<p>Code and data for the paper <em>Triples with equal sum and equal reciprocal sum</em>: the exact enumerations of all classes of triples of positive integers with equal sum and equal reciprocal sum up to sum 4800 (two independent programs) and 6000, the checks of the cubic pencil, the dual family, the growth fits, the Mordell-Weil ranks (PARI/GP) and 2-isogeny descents, the figure and the tables. <code>make verify</code> reruns the fast checks and <code>make all</code> everything; DATA.md lists every data file with its checksum, producing script and paper element, and TRACE.md maps every checkable item of the paper to its script.</p>",
+  "creators": [
+    {
+      "name": "Gang, Palaash",
+      "orcid": "0009-0006-7448-9488",
+      "affiliation": "Indus International School, Pune, India"
+    },
+    {
+      "name": "Agadi, Akshaj",
+      "orcid": "0009-0009-1378-0556",
+      "affiliation": "Texas A&M University, College Station, Texas, USA"
+    },
+    {
+      "name": "Veluri, Arjun",
+      "orcid": "0009-0001-5940-3272",
+      "affiliation": "Indus International School, Pune, India"
+    },
+    {
+      "name": "Wang, Jerry",
+      "orcid": "0009-0004-1814-275X",
+      "affiliation": "University of California, Irvine, Irvine, California, USA"
+    },
+    {
+      "name": "Barreto, Jeremy",
+      "orcid": "0009-0006-6894-7323",
+      "affiliation": "Lawrence High School, Lawrenceville, New Jersey, USA"
+    },
+    {
+      "name": "Chouthaiwale, Aarin",
+      "orcid": "0009-0008-3878-7183",
+      "affiliation": "DriveChange Learning and Resource Centre, Pune, India"
+    }
+  ],
+  "keywords": [
+    "equal sums of reciprocals",
+    "Egyptian fractions",
+    "elliptic curves",
+    "rational points",
+    "cubic pencil",
+    "Diophantine enumeration",
+    "heat invariants",
+    "hyperbolic orbifolds"
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "notes": "Code: MIT licence (LICENSE). Data, figures and text: CC-BY-4.0 (LICENSE-DATA).",
+  "language": "eng"
+}

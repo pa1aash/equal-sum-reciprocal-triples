@@ -1,0 +1,12 @@
+PASS (a) P = (4:9:18) lies on C_{155/12}
+PASS (a) O = (1:-1:0) lies on C_{155/12}
+PASS (b) 2P = (16352, 288, -365) and 3P lie on the curve
+PASS (d) P + 2P = 2P + P
+PASS (b) 3P = (162833463, 723926268, 287876366) as an ordered point
+PASS (c) the printed triple lies on the curve (the curve is symmetric)
+PASS (c) the printed point is not 3P
+PASS (c) negation: 3P + (-3P) = O
+PASS (c) the printed point is (1:0:-1) - 3P, the image of 3P under Y <-> Z
+PASS (c) printed = 3P with Y and Z exchanged
+
+10 checks, 0 failures

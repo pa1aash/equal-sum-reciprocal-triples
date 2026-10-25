@@ -1,0 +1,200 @@
+[
+ {
+  "name": "committed data consistent",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON check_committed.py",
+  "minutes": 0.1
+ },
+ {
+  "name": "curves of the pencil",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON variety_checks.py",
+  "minutes": 0.1
+ },
+ {
+  "name": "families and dual pairs",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON families.py 4800 7",
+  "minutes": 2.35
+ },
+ {
+  "name": "growth fits",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON growth_fits.py",
+  "minutes": 0.55,
+  "needs": "cc"
+ },
+ {
+  "name": "exponent fits",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON exponent_fits.py",
+  "minutes": 1.25
+ },
+ {
+  "name": "ranks (PARI ellrank)",
+  "targets": [
+   "verify"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON_PARI ranks.py",
+  "minutes": 0.1,
+  "needs": "pari"
+ },
+ {
+  "name": "note checks, with the enumeration 4801..6000",
+  "targets": [
+   "verify"
+  ],
+  "dir": ".",
+  "cmd": "$PYTHON checks/note/check_note.py --enum",
+  "minutes": 0.95,
+  "needs": "cc"
+ },
+ {
+  "name": "sums with a primitive class",
+  "targets": [
+   "verify"
+  ],
+  "dir": ".",
+  "cmd": "$PYTHON checks/note/count_sums.py",
+  "minutes": 0.1
+ },
+ {
+  "name": "the point 3P",
+  "targets": [
+   "verify"
+  ],
+  "dir": ".",
+  "cmd": "$PYTHON checks/point3P/check_point3P.py",
+  "minutes": 0.1
+ },
+ {
+  "name": "classes to 4800, second program",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "$PYTHON check_enum.py",
+  "minutes": 0.22,
+  "needs": "cc"
+ },
+ {
+  "name": "group law on the curves",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "$PYTHON check_groups.py",
+  "minutes": 1.37
+ },
+ {
+  "name": "2-isogeny descents (PARI points)",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "$PYTHON_PARI check_descent.py",
+  "minutes": 0.5,
+  "needs": "pari"
+ },
+ {
+  "name": "isosceles family",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "$PYTHON check_isosceles.py",
+  "minutes": 0.15
+ },
+ {
+  "name": "conic-bundle family",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "$PYTHON check_theorem5_family.py",
+  "minutes": 0.1
+ },
+ {
+  "name": "enumeration to 6000, third program",
+  "targets": [
+   "verify"
+  ],
+  "dir": "checks/enumeration6000",
+  "cmd": "$PYTHON check_enum.py",
+  "transcript": "checks/enumeration6000/check_enum.txt",
+  "minutes": 0.1
+ },
+ {
+  "name": "tables 1 and 2",
+  "targets": [
+   "tables"
+  ],
+  "dir": ".",
+  "cmd": "$PYTHON tools/make_tables.py --check",
+  "minutes": 0.1
+ },
+ {
+  "name": "figure 1 (F9)",
+  "targets": [
+   "figures"
+  ],
+  "dir": ".",
+  "cmd": "$PYTHON figures/src/F9.py",
+  "minutes": 0.12
+ },
+ {
+  "name": "torsion-type pairs to 4800",
+  "targets": [
+   "full"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON torsion_pairs.py",
+  "minutes": 4
+ },
+ {
+  "name": "enumeration to 4800 from scratch (enumerate_fast)",
+  "targets": [
+   "full"
+  ],
+  "dir": "theory/diophantine",
+  "cmd": "$PYTHON enumerate_fast.py 4800",
+  "minutes": 1.2,
+  "needs": "cc"
+ },
+ {
+  "name": "second program from scratch to 4800",
+  "targets": [
+   "full"
+  ],
+  "dir": "checks/classes4800",
+  "cmd": "cc -O2 -o \"$LOGDIR/enum_classes\" enum_classes.c && \"$LOGDIR/enum_classes\" 10 4800 4800 > \"$LOGDIR/enum_4800.txt\" && cmp \"$LOGDIR/enum_4800.txt\" enum_4800.txt",
+  "minutes": 0.65,
+  "needs": "cc"
+ },
+ {
+  "name": "third program from scratch to 6000",
+  "targets": [
+   "full"
+  ],
+  "dir": "checks/enumeration6000",
+  "cmd": "mkdir -p \"$LOGDIR/e6000\" && cp check_enum.py enum.c \"$LOGDIR/e6000/\" && (cd \"$LOGDIR/e6000\" && $PYTHON check_enum.py > out.txt) && cmp \"$LOGDIR/e6000/data/summary_10_6000.txt\" data/summary_10_6000.txt && cmp \"$LOGDIR/e6000/data/fibres_10_2000.txt\" data/fibres_10_2000.txt",
+  "minutes": 2.45,
+  "needs": "cc"
+ }
+]

@@ -1,0 +1,20 @@
+PASS bundle pair: both sums = (au+bv)(u+av)
+PASS bundle pair: equal reciprocal sums
+PASS it is the dual pair of t=(u,vq,vr) divided by v (e2 = v(au+bv), e1 = u+av)
+     tuples (q,r,u,v) with Q <= 60000, non-GP: 46067; distinct reduced pairs D: 24353; histogram of tuples per D: {1: 12180, 2: 5961, 3: 4115, 4: 1260, 5: 442, 6: 395}
+PASS every reduced pair D arises from at most 6 tuples (multiplicity 6 is correct)
+     pairs D reached from two different slopes (q,r): 6925
+PASS box [1,U]x[1,V], U = beta V/alpha, V = sqrt(y/(4 alpha beta)): Q <= y (corner check, beta/alpha <= alpha)
+PASS c_A = (3/(2pi^2))(3/pi^2)(1/6)(1/8) = 3/(32*pi**4)
+PASS c_N = c_A * (1/2) * (1/2) = 3/(128*pi**4) (as stated)
+     with the same argument, log M = theta log y for any theta < 1/6, and #{k>=4} ~ X/S_D on S_D <= X/log X: constant -> 1/(16*pi**4) (sup over the method); 3/(128 pi^4) is valid, not optimal
+     M=100: sum_(n<=M) phi(n)/(2n^2) = 1.37370, (3/pi^2) log M = 1.39980, sum over coprime q<=r<=M of 1/(q+r)^2 = 1.46701
+     M=1000: sum_(n<=M) phi(n)/(2n^2) = 2.07352, (3/pi^2) log M = 2.09971, sum over coprime q<=r<=M of 1/(q+r)^2 = 2.16679
+     M=3000: sum_(n<=M) phi(n)/(2n^2) = 2.40737, (3/pi^2) log M = 2.43364
+PASS sum over coprime q<=r<=M of 1/(q+r)^2 >= sum_(n<=M) phi(n)/(2n^2) ~ (3/pi^2) log M
+PASS M = y^(1/8): total error y^(7/8) log y = o(y) (needs theta < 1/6)
+     y=10000: distinct family pairs with S_D <= y: 5321; c_A y log y = 89
+     y=30000: distinct family pairs with S_D <= y: 14185; c_A y log y = 298
+     y=60000: distinct family pairs with S_D <= y: 24353; c_A y log y = 635
+PASS family counts exceed c_A y log y on the computed range
+ALL THEOREM-5 FAMILY CHECKS PASSED

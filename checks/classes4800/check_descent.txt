@@ -1,0 +1,48 @@
+PASS self-test: Sel^phi(y^2=x^3-x) = {+-1}; Sel^phi'(y^2=x^3+4x) = {1,2} (rank 0, Silverman-Tate III.6)
+--- C_27/2  (base pair (1,4,4),(1,1,4)): E = [0,393,0,3456,0], E' = [0,-786,0,140625,0]
+PASS Selmer sets are groups: |Sel^phi| = 4, |Sel^phi'| = 1
+     Sel^phi(E)  = [-6, -1, 1, 6]
+     Sel^phi'(E') = [1]
+PASS images of found points lie in the Selmer groups
+     images: alpha = [-6, -1, 1, 6], alpha' = [1]
+     0 <= rank <= 0   (PARI ellrank on E: [0, 0], on E': [0, 0])
+     RANK PROVEN = 0 by 2-isogeny descent (unconditional)
+PASS claimed rank 0 within [0,0]
+PASS C_27/2 has rank 0, unconditionally (2-isogeny descent)
+--- C_68/5  (S=136 and S=408 fibres): E = [0,2509,0,136000,0], E' = [0,-5018,0,5751081,0]
+PASS Selmer sets are groups: |Sel^phi| = 4, |Sel^phi'| = 4
+     Sel^phi(E)  = [-17, -5, 1, 85]
+     Sel^phi'(E') = [1, 21, 69, 161]
+PASS images of found points lie in the Selmer groups
+     images: alpha = [-17, -5, 1, 85], alpha' = [1, 21, 69, 161]
+     2 <= rank <= 2   (PARI ellrank on E: [2, 2], on E': [2, 2])
+     RANK PROVEN = 2 by 2-isogeny descent (unconditional)
+PASS claimed rank 2 within [2,2]
+--- C_1849/120 (S=1849 fibre): E = [0,2044321,0,51121152000,0], E' = [0,-4088642,0,3974763743041,0]
+PASS Selmer sets are groups: |Sel^phi| = 8, |Sel^phi'| = 4
+     Sel^phi(E)  = [-430, -129, -10, -3, 1, 30, 43, 1290]
+     Sel^phi'(E') = [1, 769, 1729, 1329601]
+PASS images of found points lie in the Selmer groups
+     images: alpha = [-430, -129, 1, 30, 43, 1290], alpha' = [1, 769, 1729, 1329601]
+     3 <= rank <= 3   (PARI ellrank on E: [3, 3], on E': [3, 3])
+     RANK PROVEN = 3 by 2-isogeny descent (unconditional)
+PASS claimed rank 3 within [3,3]
+--- C_230/21 (S=4600 fibre): E = [0,22597,0,34080480,0], E' = [0,-45194,0,374302489,0]
+PASS Selmer sets are groups: |Sel^phi| = 16, |Sel^phi'| = 2
+     Sel^phi(E)  = [-2415, -483, -230, -105, -46, -21, -10, -2, 1, 5, 23, 42, 115, 210, 966, 4830]
+     Sel^phi'(E') = [1, 8569]
+PASS images of found points lie in the Selmer groups
+     images: alpha = [-2415, -483, -230, -105, -46, -21, -10, 1, 5, 23, 42, 115, 210, 966, 4830], alpha' = [1, 8569]
+     3 <= rank <= 3   (PARI ellrank on E: [3, 3], on E': [3, 3])
+     RANK PROVEN = 3 by 2-isogeny descent (unconditional)
+PASS claimed rank 3 within [3,3]
+--- C_155/12 (Theorem 3 example): E = [0,12433,0,4285440,0], E' = [0,-24866,0,137437729,0]
+PASS Selmer sets are groups: |Sel^phi| = 8, |Sel^phi'| = 2
+     Sel^phi(E)  = [-186, -62, -30, -10, 1, 3, 155, 465]
+     Sel^phi'(E') = [1, 6721]
+PASS images of found points lie in the Selmer groups
+     images: alpha = [-186, -62, -30, -10, 1, 3, 155, 465], alpha' = [1, 6721]
+     2 <= rank <= 2   (PARI ellrank on E: [2, 2], on E': [2, 2])
+     RANK PROVEN = 2 by 2-isogeny descent (unconditional)
+PASS claimed rank 2 within [2,2]
+ALL DESCENT CHECKS PASSED

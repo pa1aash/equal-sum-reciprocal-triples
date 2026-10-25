@@ -1,0 +1,53 @@
+== 1. identities (symbolic, all parameter values) ==
+  PASS  Vieta: lambda(qr/p, q, r) = lambda(p, q, r)
+  PASS  Dual: {e2 t, e1 (bc,ca,ab)} has S = e1 e2 and R = 1/e3 for all (a,b,c)
+  PASS  Isosceles: {(2u+v)(u,v,v), (u+2v)(v,u,u)} has S = (2u+v)(u+2v), R = 1/(uv)
+  PASS  Conic bundle: {(u(q+r)+vqr)(u,vq,vr), (u+v(q+r))(vqr,ur,uq)} has equal S and R
+
+== 2-3. isosceles family and the lower bound ==
+  PASS  all 2917 hyperbolic isosceles pairs with S <= 4800 are in data/groups.csv
+      X  prim iso  c_iso X  iso pairs k>=4  c_iso XlogX floor(X/18)    N(X)
+    600        61     63.2             121        404.3          33    3067
+   1000       105    105.3             248        727.7          55    7641
+   2000       207    210.7             648       1601.4         111   25042
+   3000       313    316.0            1098       2530.3         166   48574
+   4000       425    421.4            1586       3495.0         222   77203
+   4800       506    505.7            1992       4286.2         266  102719
+
+== 4. decomposition of primitive pairs ==
+      X prim pairs    dual iso dual non-dual  dual %
+    200        249      82       20      167    32.9
+    600       1753     423       61     1330    24.1
+   1000       4141     887      105     3254    21.4
+   2000      12512    2298      207    10214    18.4
+   3000      23207    4061      313    19146    17.5
+   4000      35567    5992      425    29575    16.8
+   4800      46254    7626      506    38628    16.5
+  local exponent of primitive dual pairs over 3000..4800: 1.341
+  local exponent of primitive non-dual pairs over 3000..4800: 1.493
+  local exponent of primitive all primitive pairs over 3000..4800: 1.467
+
+== 5. degree-2 families from pairs of lines ==
+  189 lines up to S3 with |coefficients| <= 7; 189 distinct branch signatures
+  family (0, 1, -7) ~ (0, 7, -1)  phi=(0, 7, 1, 0)  deg 2: 139 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -6) ~ (0, 6, -1)  phi=(0, 6, 1, 0)  deg 2: 135 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -5) ~ (0, 5, -1)  phi=(0, 5, 1, 0)  deg 2: 152 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -4) ~ (0, 4, -1)  phi=(0, 4, 1, 0)  deg 2: 271 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -3) ~ (0, 3, -1)  phi=(0, 3, 1, 0)  deg 2: 258 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -2) ~ (0, 2, -1)  phi=(0, 2, 1, 0)  deg 2: 365 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 1, -1) ~ (0, 1, -1)  phi=(0, 1, 1, 0)  deg 2: 506 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 2, -7) ~ (0, 7, -2)  phi=(0, 14, 1, 0)  deg 2: 86 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 2, -5) ~ (0, 5, -2)  phi=(0, 10, 1, 0)  deg 2: 182 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 2, -3) ~ (0, 3, -2)  phi=(0, 6, 1, 0)  deg 2: 210 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 3, -7) ~ (0, 7, -3)  phi=(0, 21, 1, 0)  deg 2: 74 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 3, -5) ~ (0, 5, -3)  phi=(0, 15, 1, 0)  deg 2: 133 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 3, -4) ~ (0, 4, -3)  phi=(0, 12, 1, 0)  deg 2: 131 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 4, -7) ~ (0, 7, -4)  phi=(0, 28, 1, 0)  deg 2: 91 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 4, -5) ~ (0, 5, -4)  phi=(0, 20, 1, 0)  deg 2: 92 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 5, -7) ~ (0, 7, -5)  phi=(0, 35, 1, 0)  deg 2: 53 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 5, -6) ~ (0, 6, -5)  phi=(0, 30, 1, 0)  deg 2: 124 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  family (0, 6, -7) ~ (0, 7, -6)  phi=(0, 42, 1, 0)  deg 2: 51 pairs with S <= 4800 (all in data), reciprocal (dual) pairs
+  18 non-trivial line-pair families found
+
+== 6. multiplication relations Q = +-mP + T on non-dual pairs (S <= 400) ==
+  669 non-dual primitive pairs; 0 satisfy Q = +-mP + T or P = +-mQ + T with m in (2, 3) and T torsion

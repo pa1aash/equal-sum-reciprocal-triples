@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.venv-*/
+checks/classes4800/enum_classes
+checks/enumeration6000/data/enum

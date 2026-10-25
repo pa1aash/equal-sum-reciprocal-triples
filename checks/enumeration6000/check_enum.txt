@@ -1,0 +1,92 @@
+PASS C summary covers 10..6000
+== Python exact enumeration S <= 600
+PASS triad counts agree (Python vs C), S<=600
+PASS collision fibres agree exactly (Python vs C), S<=600
+PASS C pair counts consistent with dumped fibres, S<=2000
+== Theorem A/B, Corollary 2, tab:enum
+PASS no collision for S<=17
+PASS S=18: exactly one collision, {(2,8,8),(3,3,12)}, R=3/4
+   tab:enum reference listing written (total triads 10<=S<=18: 83)
+   triads per S: {10: 1, 11: 3, 12: 6, 13: 7, 14: 9, 15: 11, 16: 13, 17: 15, 18: 18}
+== S=36
+    (3, 8) ((4, 16, 16), (6, 6, 24))
+    (3, 10) ((6, 15, 15), (8, 8, 20))
+PASS S=36: exactly two fibres {(4,16,16),(6,6,24)} R=3/8 and {(6,15,15),(8,8,20)} R=3/10
+   note: (6,15,15) has least order 6 and (8,8,20) least order 8: a NON-adjacent collision
+== tab:density (cumulative)
+   S  | claimed | pairs | fibres | primitive fibres | adjacent-strata pairs
+     18 |     1 |     1 |     1 |     1 |     1
+    100 |    92 |    92 |    92 |    69 |    38
+    200 |   386 |   386 |   380 |   243 |    88
+    300 |   840 |   840 |   822 |   507 |   132
+    400 |  1496 |  1496 |  1468 |   900 |   187
+    500 |  2210 |  2210 |  2158 |  1302 |   224
+    600 |  3067 |  3067 |  2977 |  1714 |   274
+PASS tab:density matches the PAIR convention (C(k,2) pairs per fibre)
+PASS fibre (class) count to 600 = 2977 
+PASS fibres <= pairs
+   18: N/S=0.0556 N/S^2=0.00309
+   100: N/S=0.9200 N/S^2=0.00920
+   200: N/S=1.9300 N/S^2=0.00965
+   300: N/S=2.8000 N/S^2=0.00933
+   400: N/S=3.7400 N/S^2=0.00935
+   500: N/S=4.4200 N/S^2=0.00884
+   600: N/S=5.1117 N/S^2=0.00852
+PASS floor(600/18)=33
+   S<=600: adjacent-strata pairs 274, non-adjacent pairs 2793
+PASS non-adjacent collisions exist (contradicts 'localizes every degeneracy to adjacent strata')
+== power-law fit, 50<=S<=600
+   pairs: slope over all integer S = 2.0277; over table checkpoints = 1.9597
+   fibres: slope over all integer S = 2.0147; over table checkpoints = 1.9451
+PASS exponent 2.03 reproduced (pairs, all S in [50,600]): 2.0277
+== conj:density test to S=6000
+   S     N_pairs   N/S^2     N_fibres  N/S^2   local exponent (pairs, [S/2,S])  N_pairs/(S^2 log S)
+     100        92 0.00920         92 0.00920   2.5236   0.001998
+     200       386 0.00965        380 0.00950   2.0689   0.001821
+     300       840 0.00933        822 0.00913   2.0069   0.001636
+     400      1496 0.00935       1468 0.00918   1.9544   0.001561
+     500      2210 0.00884       2158 0.00863   1.9935   0.001422
+     600      3067 0.00852       2977 0.00827   1.8684   0.001332
+     800      5202 0.00813       5035 0.00787   1.7980   0.001216
+    1000      7641 0.00764       7386 0.00739   1.7897   0.001106
+    1200     10515 0.00730      10178 0.00707   1.7775   0.001030
+    1500     15342 0.00682      14817 0.00659   1.7441   0.000932
+    2000     25042 0.00626      24127 0.00603   1.7125   0.000824
+    2500     36167 0.00579      34808 0.00557   1.6821   0.000740
+    3000     48574 0.00540      46755 0.00519   1.6627   0.000674
+    3600     65049 0.00502      62599 0.00483   1.6384   0.000613
+    4000     77203 0.00483      74234 0.00464   1.6243   0.000582
+    4800    102719 0.00446      98742 0.00429   1.6026   0.000526
+    5400    123559 0.00424     118769 0.00407   1.5952   0.000493
+    6000    145679 0.00405     140005 0.00389   1.5845   0.000465
+   OLS exponent (pairs) on [600,1200]: 1.7762; fibres 1.7726
+   OLS exponent (pairs) on [1200,2400]: 1.6879; fibres 1.6801
+   OLS exponent (pairs) on [2400,4800]: 1.6028; fibres 1.6006
+   OLS exponent (pairs) on [3000,6000]: 1.5821; fibres 1.5800
+   mean N(S) on [500,600] = 8.53;  /S = 0.01552;  /(S log S) = 0.002459
+   mean N(S) on [1000,1100] = 14.07;  /S = 0.01340;  /(S log S) = 0.001926
+   mean N(S) on [2000,2100] = 21.01;  /S = 0.01025;  /(S log S) = 0.001344
+   mean N(S) on [3000,3100] = 26.68;  /S = 0.00875;  /(S log S) = 0.001090
+   mean N(S) on [4000,4100] = 29.95;  /S = 0.00740;  /(S log S) = 0.000890
+   mean N(S) on [5900,6000] = 37.79;  /S = 0.00635;  /(S log S) = 0.000731
+== first adjacent collision table
+   p= 2: mine (18, 18, 0, '1+1', '1+1', (2, 8, 8), (3, 3, 12))  OK
+   p= 3: mine (19, 38, 19, '2+1', '11+3', (3, 14, 21), (4, 6, 28))  OK
+   p= 4: mine (20, 20, 0, '1+1', '1+1', (4, 8, 8), (5, 5, 10))  OK
+   p= 5: mine (23, 117, 94, '1+1', '49+12', (5, 32, 80), (6, 15, 96))  OK
+   p= 6: mine (26, 34, 8, '2+1', '6+3', (6, 14, 14), (7, 9, 18))  OK
+   p= 7: mine (29, 62, 33, '2+1', '18+8', (7, 20, 35), (8, 14, 40))  OK
+   p= 8: mine (32, 64, 32, '2+1', '18+8', (8, 20, 36), (9, 15, 40))  OK
+   p= 9: mine (34, 42, 8, '1+1', '5+3', (9, 15, 18), (10, 12, 20))  OK
+   p=10: mine (37, 109, 72, '1+1', '37+18', (10, 44, 55), (11, 28, 70))  OK
+   p=11: mine (40, 66, 26, '1+1', '14+8', (11, 22, 33), (12, 18, 36))  OK
+   p=12: mine (43, 188, 145, '1+1', '74+34', (12, 72, 104), (13, 45, 130))  OK
+   p=13: mine (46, 94, 48, '1+1', '25+15', (13, 39, 42), (14, 28, 52))  OK
+   p=14: mine (49, 69, 20, '1+1', '11+7', (14, 20, 35), (15, 18, 36))  OK
+   p=22: mine (73, 422, 349, '1+1', '176+96', (22, 92, 308), (23, 77, 322))  OK
+PASS every row reproduced (S*, first collision, gap, windows, pair)
+   adjacent pairs p with a first collision found (S<=2000): 116 values, p up to 455
+PASS Prop 3(2): first adjacent collision strictly after S*(p) for every p not in {2,4} found (S<=2000)
+PASS p=2,4: first collision at S*
+
+ALL ENUMERATION CHECKS PASSED
